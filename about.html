@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>关于我 — DevFest Workshop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">关于我</h1>
+      <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+      <nav>
+        <a href="index.html">首页</a>
+        <a href="gdg.html">GDG / DevFest</a>
+        <a href="devtools.html">DevTools MCP</a>
+        <a href="about.html">关于我</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>个人信息</h2>
+    <p><strong>姓名：</strong>Lucas</p>
+    <p><strong>职业：</strong>开发者</p>
+    <p><strong>兴趣爱好：</strong>看短剧</p>
+    <p><strong>联系方式：</strong><a href="mailto:isxuefang@qq.com">isxuefang@qq.com</a></p>
+
+    <section>
+      <h3>参加本次 Workshop 的目标</h3>
+      <p>通过本次 Workshop，我希望掌握 MCP Server 的基本配置与连接方式，并能够使用 DevTools 扩展或定制化调试流程。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small><a href="index.html">返回首页</a></small>
+    </div>
+  </footer>
+  <script>
+    (function(){
+      const btn = document.getElementById('menuBtn');
+      if(!btn) return;
+      btn.addEventListener('click', ()=> document.body.classList.toggle('nav-open'));
+      document.querySelectorAll('header .header-inner nav a').forEach(a=> a.addEventListener('click', ()=> document.body.classList.remove('nav-open')));
+    })();
+  </script>
+</body>
+</html>

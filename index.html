@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="记录 Lucas 参加的 Google DevFest Workshop：Chrome DevTools MCP Server 的笔记与资源。">
+  <title>DevFest Workshop — Chrome DevTools MCP Server</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">DevFest Workshop</h1>
+      <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+      <nav>
+        <a href="index.html">首页</a>
+        <a href="gdg.html">GDG / DevFest</a>
+        <a href="devtools.html">DevTools MCP</a>
+        <a href="about.html">关于我</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Chrome DevTools MCP Server 专题工作坊</h2>
+      <p class="lead">记录 Lucas 在 Google DevFest 中参加的 Workshop：主题为 Chrome DevTools MCP Server。</p>
+      <p class="meta">地点：线下 / 线上 • 日期：<strong>请替换为实际日期</strong></p>
+      <div class="actions">
+        <a class="btn" href="gdg.html">了解 GDG / DevFest</a>
+        <a class="btn ghost" href="devtools.html">了解 DevTools MCP</a>
+        <a class="btn outline" href="about.html">关于 Lucas</a>
+      </div>
+    </section>
+
+    <section class="summary">
+      <h3>活动摘要</h3>
+      <p>本页面用于汇总工作坊内容、笔记、代码片段与个人感想。你可以在子页面中找到更多详情。</p>
+      <div class="cards">
+        <article class="card">
+          <h4>议程</h4>
+          <ul>
+            <li>简介：DevTools MCP 概念</li>
+            <li>实践：运行 MCP Server 并连接 DevTools</li>
+            <li>高级：自定义 DevTools 面板与性能追踪</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h4>资源</h4>
+          <ul>
+            <li><a href="#">Chrome DevTools 文档</a></li>
+            <li><a href="#">DevTools MCP 仓库</a></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h4>笔记</h4>
+          <p>在工作坊中我会记录关键命令、调试技巧与常见问题。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Google DevFest Workshop — Chrome DevTools MCP Server</small>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const btn = document.getElementById('menuBtn');
+      if(!btn) return;
+      btn.addEventListener('click', ()=> document.body.classList.toggle('nav-open'));
+      document.querySelectorAll('header .header-inner nav a').forEach(a=> a.addEventListener('click', ()=> document.body.classList.remove('nav-open')));
+    })();
+  </script>
+</body>
+</html>

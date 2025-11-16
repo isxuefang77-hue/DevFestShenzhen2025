@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DevTools MCP — DevFest Workshop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">DevTools MCP</h1>
+      <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+      <nav>
+        <a href="index.html">首页</a>
+        <a href="gdg.html">GDG / DevFest</a>
+        <a href="devtools.html">DevTools MCP</a>
+        <a href="about.html">关于我</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Chrome DevTools MCP Server 简介</h2>
+    <p>DevTools MCP（MCP = Model Context Protocol）是一个用于与 Chrome DevTools 通信并远程调试或扩展 DevTools 的机制/服务器。工作坊会演示如何启动 MCP Server、连接 DevTools，以及如何使用 MCP 进行自定义调试体验。</p>
+
+    <section>
+      <h3>关键点</h3>
+      <ul>
+        <li>安装与启动 MCP Server（示例命令将在工作坊笔记中提供）</li>
+        <li>如何在 DevTools 中通过 MCP 连接到目标（例如远程设备或模拟环境）</li>
+        <li>常见调试场景与故障排查</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>快速示例（占位）</h3>
+      <pre><code># 启动 MCP Server（示例）
+# node mcp-server.js --port=9229
+</code></pre>
+      <p>（实际命令与示例代码请替换为 Workshop 中使用的具体命令）</p>
+    </section>
+
+    <section>
+      <h3>参考资源</h3>
+      <ul>
+        <li><a href="#">DevTools MCP 文档（占位链接）</a></li>
+        <li><a href="#">示例仓库</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small><a href="index.html">返回首页</a></small>
+    </div>
+  </footer>
+  <script>
+    (function(){
+      const btn = document.getElementById('menuBtn');
+      if(!btn) return;
+      btn.addEventListener('click', ()=> document.body.classList.toggle('nav-open'));
+      document.querySelectorAll('header .header-inner nav a').forEach(a=> a.addEventListener('click', ()=> document.body.classList.remove('nav-open')));
+    })();
+  </script>
+</body>
+</html>

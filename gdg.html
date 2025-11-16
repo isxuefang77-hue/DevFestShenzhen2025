@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GDG / DevFest — DevFest Workshop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">GDG / DevFest</h1>
+      <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+      <nav>
+        <a href="index.html">首页</a>
+        <a href="gdg.html">GDG / DevFest</a>
+        <a href="devtools.html">DevTools MCP</a>
+        <a href="about.html">关于我</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>什么是 GDG 与 DevFest？</h2>
+    <p>Google Developer Groups (GDG) 是面向开发者的社区组织，DevFest 是 GDG 举办的年度大型线下/线上活动，通常包含专题讲座、工作坊与实践环节。</p>
+
+    <section>
+      <h3>DevFest 的典型内容</h3>
+      <ul>
+        <li>主题演讲与技术分享</li>
+        <li>实践工作坊（如本次 DevTools MCP）</li>
+        <li>网络交流与项目展示</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>关于 GDG</h3>
+      <p>GDG（Google Developer Groups）是本地的开发者社区组织，旨在分享技术、组织培训与搭建交流平台。DevFest 是 GDG 举办的大型年度活动，面向不同水平的开发者。</p>
+    </section>
+
+    <section>
+      <h3>我在本次活动的收获</h3>
+      <p>（请在此填写你的笔记与感想）</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small><a href="index.html">返回首页</a></small>
+    </div>
+  </footer>
+  <script>
+    (function(){
+      const btn = document.getElementById('menuBtn');
+      if(!btn) return;
+      btn.addEventListener('click', ()=> document.body.classList.toggle('nav-open'));
+      document.querySelectorAll('header .header-inner nav a').forEach(a=> a.addEventListener('click', ()=> document.body.classList.remove('nav-open')));
+    })();
+  </script>
+</body>
+</html>
